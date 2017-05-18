@@ -7,8 +7,6 @@ machine:
     America/New_York
   environment:
     CIRCLE_ENV: test
-  php:
-    version: 5.5.21
 dependencies:
   pre:
     # touch so pra testar
