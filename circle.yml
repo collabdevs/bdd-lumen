@@ -7,13 +7,24 @@ machine:
     America/New_York
   environment:
     CIRCLE_ENV: test
-#dependencies:
-#  pre:
-    # touch so pra testar
-    #- touch build.log && echo 'logando' > 
+dependencies:
+  pre:
+    - curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
+    - sudo dpkg -i cf-cli_amd64.deb
+    - cf -v
 
 test:
   override:
     - ./build.sh  --project lumen-bdd;
     #- ./codeception-ci-generator.sh --project lumen-bdd;
-    #- ./codeception-ci-generator.sh --testing 3;
+  post:
+    - cf api https://api.ng.bluemix.net
+    - cf auth $BLUEMIX_USER $BLUEMIX_PASSWORD
+    - cf target -o $BLUEMIX_ORG -s $BLUEMIX_SPACE
+    - cf a
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - cf push
