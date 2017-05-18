@@ -1,0 +1,22 @@
+general:
+  branches:
+    only:
+      - master
+machine:
+  timezone:
+    America/New_York
+  environment:
+    CIRCLE_ENV: test
+  php:
+    version: 7
+dependencies:
+  pre:
+    # touch so pra testar
+ 
+    - touch build.log && echo 'logando' > 
+
+test:
+  override:
+    - ./build.sh  --project lumen-bdd;
+    #- ./codeception-ci-generator.sh --project lumen-bdd;
+    #- ./codeception-ci-generator.sh --testing 3;
