@@ -7,11 +7,10 @@ machine:
     America/New_York
   environment:
     CIRCLE_ENV: test
-dependencies:
-  pre:
+#dependencies:
+#  pre:
     # touch so pra testar
- 
-    - touch build.log && echo 'logando' > 
+    #- touch build.log && echo 'logando' > 
 
 test:
   override:
