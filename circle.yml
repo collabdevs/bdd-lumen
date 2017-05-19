@@ -12,7 +12,11 @@ dependencies:
     - curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
     - sudo dpkg -i cf-cli_amd64.deb
     - cf -v
-    - pecl install memcached-stable
+    # load memcached module
+    - sudo apt-get update
+    - sudo apt-get install libmemcached-dev
+    - printf "\n" | pecl install -f memcached-2.1.0
+    - echo "extension = memcached.so" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
 
 test:
   override:
