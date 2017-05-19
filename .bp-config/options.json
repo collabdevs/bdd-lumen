@@ -5,6 +5,7 @@
   "WEBDIR": "public",
   "PHP_EXTENSIONS": [
     "bz2",
+    "memcached",
     "zlib",
     "curl",
     "mcrypt",
