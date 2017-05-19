@@ -6,7 +6,7 @@ Feature: group
  Scenario: create new group
  	As a user
  	I need to be able to create a new group
- 	Given i have group with name "grupo de teste da kimmy" 
+ 	Given i have group with name "grupo de teste" 
  	When i call group_save 
  	Then  i call groups 
- 	And Then i should see that total number groups is "5"
+ 	And Then i should see that total number groups is "1"
