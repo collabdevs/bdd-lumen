@@ -16,4 +16,4 @@ return array(
 */
 
 'driver' => 'file'
-)
+);
