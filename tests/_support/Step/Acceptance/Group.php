@@ -49,4 +49,27 @@ class Group extends \AcceptanceTester{
         }
      }
 
+
+       /**
+     * @Then i call group
+     */
+     public function iCallGroup()
+     {
+        return true;
+     }
+
+    /**
+     * @Then Then i should see that group name is :arg1
+     */
+     public function thenIShouldSeeThatGroupNameIs($arg1)
+     {
+        if($this->group->name == $arg1){
+            return true;
+        }else{
+            throw new \Error("Nome do grupo não é ".$arg1, 1);
+            
+        }
+     }
+
+
 }
