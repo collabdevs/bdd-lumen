@@ -20,7 +20,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "php artisan migrate --env testing --database=testing",
+            "php artisan migrate --env testing --database=testing --force",
             "php artisan migrate"
         ]
     }
