@@ -9,4 +9,4 @@ Feature: group
  	Given i have group with name "grupo de teste" 
  	When i call group_save 
  	Then  i call groups 
- 	And Then i should see that total number groups is "1"
+ 	And Then i should see that total number groups is "5"

@@ -40,7 +40,13 @@ class Group extends \AcceptanceTester{
      */
      public function thenIShouldSeeThatTotalNumberGroupsIs($arg1)
      {
-        return $this->todos->count() == $arg1;
+
+        if($this->todos->count() == $arg1){
+            return true;
+        }else{
+            throw new \Error("Não esta retornando o numero certo de grupos", 1);
+            
+        }
      }
 
 }
