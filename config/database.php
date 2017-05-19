@@ -6,7 +6,7 @@ return [
         'local' => [
             'driver'    => 'mysql',
             'host'      => 'db4free.net',
-            'database'  => 'bddlumen_test',
+            'database'  => 'bddlumen',
             'username'  => 'blueiluminado',
             'password'  => 'azulzinho',
             'charset'   => 'utf8',
@@ -15,15 +15,14 @@ return [
             'strict'    => false,
         ],
         'testing' => [
-            'driver'    => 'mysql',
-            'host'      => 'db4free.net',
-            'database'  => 'bddlumen_test',
-            'username'  => 'iluminado',
-            'password'  => 'azulzinho',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
+            'driver'    => 'sqlite',
+            'database' => env('DB_DATABASE', storage_path('database.sqlite')),
+            'prefix'   => env('DB_PREFIX', ''),
+        ],
+        'sqlite' => [
+            'driver'   => 'sqlite',
+            'database' => env('DB_DATABASE', storage_path('database.sqlite')),
+            'prefix'   => env('DB_PREFIX', ''),
         ],
     ],
 ];
