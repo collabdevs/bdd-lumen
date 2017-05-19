@@ -15,8 +15,8 @@ dependencies:
     # load memcached module
     - sudo apt-get update
     - sudo apt-get install libmemcached-dev
-    - printf "\n" | pecl install -f memcached-2.1.0
-    - echo "extension = memcached.so" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
+    #- printf "\n" | pecl install -f memcached-2.1.0
+    #- echo "extension = memcached.so" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
 
 test:
   override:
