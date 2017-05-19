@@ -13,8 +13,9 @@ dependencies:
     - sudo dpkg -i cf-cli_amd64.deb
     - cf -v
     # load memcached module
-    - sudo apt-get update
-    - sudo apt-get install libmemcached-dev
+    #- sudo apt-get update
+    #- sudo apt-get install libmemcached-dev
+    #-/usr/local/bin/pecl install memcache
     #- printf "\n" | pecl install -f memcached-2.1.0
     #- echo "extension = memcached.so" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
 
