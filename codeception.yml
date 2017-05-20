@@ -17,4 +17,5 @@ gherkin:
         default: 
             - AcceptanceTester
             - Step\Acceptance\Group
+            - Step\Acceptance\User
 
