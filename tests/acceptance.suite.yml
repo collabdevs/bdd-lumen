@@ -12,5 +12,5 @@ modules:
         - \Helper\Acceptance
         - Lumen:
             part: ORM
-            environment_file: .env.testing     
+            environment_file: .env.testing   
          
