@@ -16,7 +16,7 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/app/', function () use ($app) {
-    return 'app';
+    return view('app', ['app_name' => 'app de teste']);
 });
 
 
