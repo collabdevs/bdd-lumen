@@ -8,3 +8,4 @@ $I->amOnPage('/app');
 //$I->click('LOGIN');
 $I->see('vem do angular');
 $I->see('bem vindo');
+$I->see('xablau');

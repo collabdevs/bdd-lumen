@@ -19,6 +19,10 @@ $app->get('/app/', function () use ($app) {
     return view('app', ['app_name' => 'app de teste']);
 });
 
+$app->get('/api/', function () use ($app) {
+    return 'xablau';
+});
+
 
 
 /**
