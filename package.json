@@ -1,0 +1,26 @@
+{
+  "name": "bdd-lumen",
+  "version": "1.0.0",
+  "description": "Codigo base em php montado em cima do lumen",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collabdevs/bdd-lumen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collabdevs/bdd-lumen/issues"
+  },
+  "homepage": "https://github.com/collabdevs/bdd-lumen#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
+  }
+}

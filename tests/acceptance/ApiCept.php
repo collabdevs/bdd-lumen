@@ -1,9 +1,9 @@
 <?php 
 $I = new AcceptanceTester($scenario);
-$I->wantTo('perform actions and see result');
+$I->wantTo('Testa os cenarios da api(devem ser basicos, os complexos são bdd e tdd)');
 
-$I->amOnPage('/');
+$I->amOnPage('/api');
 //$I->fillField('username', 'davert');
 //$I->fillField('password', 'qwerty');
 //$I->click('LOGIN');
-$I->see('Lumen (5.4.6) (Laravel Components 5.4.*)');
+$I->see('app');

@@ -10,6 +10,7 @@ Feature: group
  	When i call group_save 
  	Then  i call groups 
  	And Then i should see that total number groups is "1"
+ 	
 
 
  Scenario: create new group whit correct name

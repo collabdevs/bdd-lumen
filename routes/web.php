@@ -15,6 +15,12 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
+$app->get('/app/', function () use ($app) {
+    return 'app';
+});
+
+
+
 /**
  * Routes for resource group
  */
