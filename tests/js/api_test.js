@@ -2,6 +2,6 @@
 Feature('Api');
 
 Scenario('test something', (I) => {
-	I.amOnPage('/api');
-  	I.see('xablau');
+	I.amOnPage('/app');
+  	I.see('retorno do teste de api');
 });

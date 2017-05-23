@@ -20,14 +20,8 @@ $app->get('/app/', function () use ($app) {
 });
 
 $app->get('/api/', function () use ($app) {
-    return 'xablau';
+    return 'retorno do teste de api';
 });
-
-$app->get('/wb/hub/session', function () use ($app) {
-    return 'f1d84b0e-94b1-4b17-a838-5332b4e34f9a';
-});
-
-
 
 
 /**
