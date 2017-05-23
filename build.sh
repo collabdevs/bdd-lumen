@@ -15,6 +15,7 @@
 echo -e $Green"
 This script will create a stub PHP project with Codeception tests, TravisCI
 and/or CircleCI continuous integration in the directory provided."$Color_Off;
+php -S localhost:8000 -t public &
 
 
 

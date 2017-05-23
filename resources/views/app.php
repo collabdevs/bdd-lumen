@@ -5,22 +5,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script type="text/javascript">
   	
-  	var myApp = angular.module('openApp',[]);
+  	var openApp = angular.module('openApp',[]);
 
-	myApp.controller('AppController', ['$scope', '$http', function($scope , $http) {
-	  $scope.yourName = 'vem do angular';
+	openApp.controller('AppController', ['$scope', '$http', function($scope , $http) {
+	    $scope.yourName = 'vem do angular';
 
-	  	$http.get("/api")
+	  	var response = $http.get("http://localhost:8000/api")
 		  	.then(
 		    /* sucesso */
 		    function(response) {
-		      console.log("Your name is: " + response.data);
+		      console.log("response: " + response.data);
 		      $scope.dadoApi = response.data;
+		      return $scope.dadoApi;
 		    },
 		    /* falha */
 		    function(error) {
 		      console.log("The request failed: " + error);
 		      $scope.dadoApi = "The request failed: " + error;
+		      return $scope.dadoApi;
 		  	});
 	}]);
 

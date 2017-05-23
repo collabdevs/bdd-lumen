@@ -8,4 +8,5 @@ $I->amOnPage('/app');
 //$I->click('LOGIN');
 $I->see('vem do angular');
 $I->see('bem vindo');
+//var_dump($I->sendAjaxRequest('GET', 'api/', array('title' => 'new title')));
 $I->see('xablau');

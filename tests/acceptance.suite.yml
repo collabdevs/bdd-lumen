@@ -13,4 +13,6 @@ modules:
         - Lumen:
             part: ORM
             environment_file: .env.testing   
-         
+        - REST:
+           depends: PhpBrowser
+           url: 'http://localhost:8000/api/'
