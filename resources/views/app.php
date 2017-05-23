@@ -10,7 +10,7 @@
 	openApp.controller('AppController', ['$scope', '$http', function($scope , $http) {
 	    $scope.yourName = 'vem do angular';
 
-	  	var response = $http.get("http://localhost:8000/api")
+	  	var response = $http.get("api")
 		  	.then(
 		    /* sucesso */
 		    function(response) {
