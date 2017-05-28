@@ -15,6 +15,10 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
+$app->get('/admin/', function () use ($app) {
+    return view('admin', ['app_name' => 'app de teste' , 'public' => '/adm/']);
+});
+
 $app->get('/app/', function () use ($app) {
     return view('app', ['app_name' => 'app de teste']);
 });
@@ -22,6 +26,12 @@ $app->get('/app/', function () use ($app) {
 $app->get('/api/', function () use ($app) {
     return 'retorno do teste de api';
 });
+
+$app->get('/site/', function () use ($app) {
+    return 'retorno do teste de api';
+});
+
+
 
 
 /**

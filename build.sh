@@ -27,6 +27,7 @@ Building Codeception suite and running  tests...
 ";
 
 ./vendor/bin/codecept --steps run $PROJECT;
+codeceptjs --steps run $PROJECT;
 
 # Print confirmation.
 echo -e $Green;
