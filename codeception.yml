@@ -18,4 +18,5 @@ gherkin:
             - AcceptanceTester
             - Step\Acceptance\Group
             - Step\Acceptance\User
+            - Step\Acceptance\Ecom
 
